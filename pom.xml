@@ -93,6 +93,6 @@
       		<url>http://localhost:8081/repository/maven-releases/</url>
       		<layout>default</layout>
     	</repository>
-	</distributionManagement>
+	</distributionManagement> 
 
 </project>
