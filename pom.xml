@@ -90,7 +90,7 @@
       		<uniqueVersion>false</uniqueVersion>
       		<id>deploymentRepo</id>
       		<name>Esprit Repository</name>
-      		<url>http://localhost:8081/repository/maven-releases/</url>
+      		<url>http://localhost:8081/repository/project_ci/</url>
       		<layout>default</layout>
     	</repository>
 	</distributionManagement> 
