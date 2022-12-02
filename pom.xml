@@ -84,6 +84,11 @@
     			<version>3.1.0</version>
 			</plugin>   
 		</plugins>
+			<Plugin>
+				<GroupId> org. apache. maven. plugins </groupId>
+				<ArtifactId> maven-deploy-plugin </artifactId>
+				<Version> 2.7 </version>
+			</Plugin>
 	</build>
 
 </project>
