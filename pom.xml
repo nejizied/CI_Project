@@ -86,14 +86,13 @@
 		</plugins>
 	</build>
 	<distributionManagement>
-    <repository>
-      <uniqueVersion>false</uniqueVersion>
-      <id>esorit</id>
-      <name>Esprit Repository</name>
-      <url>http://local:8081/repository/maven-releases/</url>
-      <layout>default</layout>
-    </repository>
-    ...
-</distributionManagement>
+    	<repository>
+      		<uniqueVersion>false</uniqueVersion>
+      		<id>esorit</id>
+      		<name>Esprit Repository</name>
+      		<url>http://local:8081/repository/maven-releases/</url>
+      		<layout>default</layout>
+    	</repository>
+	</distributionManagement>
 
 </project>
