@@ -1,0 +1,46 @@
+pipeline {
+    agent any
+    environment {
+        imageName = "backend-image"
+        registryCredentials = "nexus"
+        registry = "http://localhost:8081/"
+        dockerImage = ''
+    }
+    stages {
+        stage("Cloning Project"){
+            steps {
+                git branch: 'main', url: 'https://github.com/nejizied/CI_Project.git'
+                echo 'checkout stage'
+            }
+        }
+       
+        stage ('MVN clean') {
+      steps {
+        sh 'mvn clean -e'
+        echo 'Build stage done'
+      }
+    }
+   
+        stage("compile Project"){
+            steps {
+                 sh 'mvn compile -X -e'
+                  echo 'compile stage done'
+            }
+        }
+    
+        stage("mvn Pckage") {
+            steps {
+                script {
+                    sh "mvn package -DskipTests=true"
+                }
+            }
+        }
+        stage("docker build") {
+            steps{
+                script {
+                    dockerImage = docker.build imageName
+                }
+            }
+        }
+    }
+}
